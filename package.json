@@ -1,0 +1,24 @@
+{
+  "name": "tutorial-webdriverio5-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/example-*.js -t 300000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/applitools/tutorial-webdriverio5-basic.git"
+  },
+  "author": "Applitools Team <team@applitools.com> (http://www.applitools.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/applitools/tutorial-webdriverio5-basic/issues"
+  },
+  "homepage": "https://github.com/applitools/tutorial-webdriverio5-basic#readme",
+  "devDependencies": {
+    "@applitools/eyes-selenium": "^4.31.9",
+    "@applitools/eyes-webdriverio": "^5.8.1",
+    "mocha": "^6.2.2"
+  }
+}
