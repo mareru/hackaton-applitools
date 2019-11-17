@@ -42,7 +42,8 @@ describe('wdio5', function () {
   });
 
   it('Classic Runner Test', async () => {
-    await browser.url('https://demo.applitools.com');
+    // await browser.url('https://demo.applitools.com');
+    await browser.url('https://demo.applitools.com/index_v2.html');
 
     const runner = new ClassicRunner();
 
@@ -55,7 +56,8 @@ describe('wdio5', function () {
     eyes.setConfiguration(configuration);
     await eyes.open(browser);
 
-    await browser.url('https://demo.applitools.com');
+    // await browser.url('https://demo.applitools.com');
+    await browser.url('https://demo.applitools.com/index_v2.html');
 
     // Visual checkpoint #1.
     await eyes.check('Login Window', Target.window());

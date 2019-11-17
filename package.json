@@ -2,9 +2,9 @@
   "name": "tutorial-webdriverio5-basic",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/example-*.js -t 300000"
+    "test1": "mocha ./test/example-*.js -t 300000",
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,43 @@
     "url": "https://github.com/applitools/tutorial-webdriverio5-basic/issues"
   },
   "homepage": "https://github.com/applitools/tutorial-webdriverio5-basic#readme",
+  "keywords": [
+    "webdriverio"
+  ],
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "@types/cucumber": "^4.0.5",
+    "@wdio/cli": "^5.13.2",
+    "@wdio/config": "^5.13.2",
+    "@wdio/cucumber-framework": "^5.13.2",
+    "@wdio/local-runner": "^5.13.2",
+    "@wdio/selenium-standalone-service": "^5.13.2",
+    "@wdio/spec-reporter": "^5.13.2",
+    "@wdio/sync": "^5.13.2",
+    "chai": "^4.1.2",
+    "eslint-plugin-wdio": "^5.7.8",
+    "file-system": "^2.2.2",
+    "mjpeg-consumer": "^2.0.0",
+    "node-fetch": "^2.6.0",
+    "webdriverio": "^5.15.4",
+    "yarn": "^1.17.3",
+    "cucumber": "^4.2.1"
+  },
   "devDependencies": {
-    "@applitools/eyes-selenium": "^4.31.9",
-    "@applitools/eyes-webdriverio": "^5.8.1",
-    "mocha": "^6.2.2"
+    "@babel/core": "^7.4.0",
+    "@wdio/allure-reporter": "^5.13.2",
+    "@wdio/browserstack-service": "^5.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.8.0",
+    "chromedriver": "^75.0.0",
+    "eslint": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "forever": "^0.15.3",
+    "jest": "^24.8.0",
+    "npm-run-all": "^4.1.5",
+    "wdio-chromedriver-service": "^5.0.2"
   }
 }

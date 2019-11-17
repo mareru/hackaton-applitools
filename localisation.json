@@ -1,0 +1,11 @@
+{
+    "login": {
+      "usernameLbl": "Username",
+      "passwordLbl": "Password",
+      "title": "Login Form",
+      "usernamePlaceholderText": "Enter your username",
+      "passwordPlaceholderText": "Enter your password",
+      "loginButtonText": "Log In",
+      "rememberMeLbl": "Remember Me"
+    }
+}
