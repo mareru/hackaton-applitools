@@ -1,0 +1,10 @@
+{
+  "login": {
+    "username": "john",
+    "password": "1234"
+  },
+  "dashboard": {
+    "urlV1": "https://demo.applitools.com/hackathonApp.html",
+    "urlV2": "https://demo.applitools.com/hackathonAppV2.html"
+  }
+}

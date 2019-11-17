@@ -6,6 +6,9 @@
       "usernamePlaceholderText": "Enter your username",
       "passwordPlaceholderText": "Enter your password",
       "loginButtonText": "Log In",
-      "rememberMeLbl": "Remember Me"
+      "rememberMeLbl": "Remember Me",
+      "passwordAlertMsg": "Password must be present",
+      "usernameAlertMsg": "Username must be present",
+      "usernameAndPasswordAlertMsg": "Both Username and Password must be present"
     }
 }

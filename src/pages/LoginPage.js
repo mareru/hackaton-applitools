@@ -61,13 +61,17 @@ class LoginPage {
         return $('img[src*=\'linkedin\']');
     }
 
+    get alertMessage() {
+        return $('div[role="alert"].alert-warning');
+    }
+
     openPage(appVersion) {
         if (appVersion === APP_VERSION_1) {
             browser.url('/hackathon.html');
         } else if (appVersion === APP_VERSION_2) {
             browser.url('/hackathonV2.html');
         } else {
-            console.error('Unsupported application version: ' + appVersion);
+            throw new Error("Unsupported application version: " + appVersion);
         }
     }
 
@@ -134,7 +138,29 @@ class LoginPage {
         Helpers.elemExistsAndIsDisplayed(this.linkedInIcon);
     }
 
+    inputUsername(text) {
+        Helpers.elemInputText(this.usernameField, text);
+    }
 
+    inputPassword(text) {
+        Helpers.elemInputText(this.passwordField, text);
+    }
+
+    login() {
+        this.loginButton.click();
+    }
+
+    alertMessageForPassIsDisplayed() {
+        Helpers.alertMessageIsDisplayed(this.alertMessage, loc.login.passwordAlertMsg);
+    }
+
+    alertMessageForUsernameIsDisplayed() {
+        Helpers.alertMessageIsDisplayed(this.alertMessage, loc.login.usernameAlertMsg);
+    }
+
+    alertMessageForUsernameAndPassIsDisplayed() {
+        Helpers.alertMessageIsDisplayed(this.alertMessage, loc.login.usernameAndPasswordAlertMsg);
+    }
 }
 
 export default new LoginPage();

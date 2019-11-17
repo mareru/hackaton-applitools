@@ -1,5 +1,5 @@
 const path = require('path');
-// const commands = require('./src/commands/commands');
+const commands = require('./src/commands/commands');
 
 exports.config = {
     //
@@ -13,8 +13,9 @@ exports.config = {
     // `wdio` will be called from there.
 
     specs: [
-        './src/features/**/*.feature',
-        // './src/features/accountSummary.feature',
+        //'./src/features/**/*.feature',
+        // './src/features/loginPageUIElements.feature',
+        './src/features/loginPageDataDriven.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -179,7 +180,7 @@ exports.config = {
             // tags matching the expression, see
             // https://docs.cucumber.io/tag-expressions/
             tagExpression:
-                '@V1',
+                '@V2',
             // <boolean> add cucumber tags to feature or scenario name
             tagsInTitle:
                 false,
@@ -213,14 +214,14 @@ exports.config = {
         global.should = chai.should();
 
         //setup test data
-        //global.testdata = require('./testData');
+        global.testdata = require('./testData');
         global.loc = require('./localisation');
 
         browser.maximizeWindow();
 
-       /* Object.keys(commands).forEach(key => {
+       Object.keys(commands).forEach(key => {
             browser.addCommand(key, commands[key]);
-        })*/
+        })
     }
     ,
     //
