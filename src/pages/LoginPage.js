@@ -1,7 +1,7 @@
 'use strict';
 
 import {APP_VERSION_1, APP_VERSION_2} from "../helpers/constants";
-import Helpers from "../helpers/helpers";
+import Helpers from "../helpers/Helpers";
 
 class LoginPage {
 
