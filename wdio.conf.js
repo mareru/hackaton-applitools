@@ -15,7 +15,8 @@ exports.config = {
     specs: [
         //'./src/features/**/*.feature',
         // './src/features/loginPageUIElements.feature',
-        './src/features/loginPageDataDriven.feature',
+        // './src/features/loginPageDataDriven.feature',
+        './src/features/tableSort.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -180,7 +181,7 @@ exports.config = {
             // tags matching the expression, see
             // https://docs.cucumber.io/tag-expressions/
             tagExpression:
-                '@V2',
+                '@V1',
             // <boolean> add cucumber tags to feature or scenario name
             tagsInTitle:
                 false,

@@ -1,4 +1,4 @@
-import {Then, When} from 'cucumber';
+import {Then, When, Given} from 'cucumber';
 import LoginPage from "../pages/LoginPage";
 import DashboardPage from "../pages/DashboardPage";
 
@@ -28,4 +28,11 @@ Then(/^An error is thrown for the missing username and password$/, function () {
 });
 When(/^I click login button$/, function () {
     LoginPage.login();
+});
+Given(/^I am logged in "([^"]*)" app$/, function (appVersion) {
+    LoginPage.openPage(appVersion);
+    LoginPage.inputUsername(testdata.login.username);
+    LoginPage.inputPassword(testdata.login.password);
+    LoginPage.login();
+    DashboardPage.verify(appVersion);
 });
