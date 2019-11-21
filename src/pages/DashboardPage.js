@@ -23,6 +23,28 @@ class DashboardPage {
         return $('#showExpensesChart');
     }
 
+    get adImage1() {
+        return $('#flashSale > img');
+    }
+
+    get adImage2() {
+        return $('#flashSale2 > img');
+    }
+
+    verifyFirstAdImageExist() {
+        Helpers.elemExistsAndIsDisplayed(this.adImage1);
+
+        let adImgAttribute1 = this.adImage1.getAttribute("src");
+        expect(adImgAttribute1).to.have.string('flashSale.gif');
+    }
+
+    verifySecondAdImageExist() {
+        Helpers.elemExistsAndIsDisplayed(this.adImage2);
+
+        let adImgAttribute2 = this.adImage2.getAttribute("src");
+        expect(adImgAttribute2).to.have.string('flashSale2.gif');
+    }
+
     clickAmountColumnHeader() {
         this.amountColumnHeader.click();
     }
@@ -40,11 +62,11 @@ class DashboardPage {
         this.compareExpensesButton.click();
     }
 
-    verify(appVersion) {
+    verify(appVersion, displayAd = false) {
         if (appVersion === APP_VERSION_1) {
-            browser.waitForUrl(testdata.dashboard.urlV1, LOW_TIMEOUT, false);
+            displayAd? browser.waitForUrl(testdata.dashboard.urlV1WithShowAd, LOW_TIMEOUT, false) : browser.waitForUrl(testdata.dashboard.urlV1, LOW_TIMEOUT, false);
         } else if (appVersion === APP_VERSION_2) {
-            browser.waitForUrl(testdata.dashboard.urlV2, LOW_TIMEOUT, false);
+            displayAd ? browser.waitForUrl(testdata.dashboard.urlV2WithShowAd, LOW_TIMEOUT, false) : browser.waitForUrl(testdata.dashboard.urlV2, LOW_TIMEOUT, false);
         } else {
             throw new Error("Unsupported application version: " + appVersion);
         }

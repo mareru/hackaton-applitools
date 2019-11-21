@@ -5,7 +5,9 @@
   },
   "dashboard": {
     "urlV1": "https://demo.applitools.com/hackathonApp.html",
-    "urlV2": "https://demo.applitools.com/hackathonAppV2.html"
+    "urlV2": "https://demo.applitools.com/hackathonAppV2.html",
+    "urlV1WithShowAd": "https://demo.applitools.com/hackathonApp.html?showAd=true",
+    "urlV2WithShowAd": "https://demo.applitools.com/hackathonAppV2.html?showAd=true"
   },
   "chart": {
     "urlV1": "https://demo.applitools.com/hackathonChart.html",

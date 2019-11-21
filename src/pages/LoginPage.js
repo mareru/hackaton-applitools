@@ -65,11 +65,11 @@ class LoginPage {
         return $('div[role="alert"].alert-warning');
     }
 
-    openPage(appVersion) {
+    openPage(appVersion, displayAd = false) {
         if (appVersion === APP_VERSION_1) {
-            browser.url('/hackathon.html');
+            displayAd? browser.url('/hackathon.html?showAd=true') : browser.url('/hackathon.html');
         } else if (appVersion === APP_VERSION_2) {
-            browser.url('/hackathonV2.html');
+            displayAd? browser.url('/hackathonV2.html?showAd=true') : browser.url('/hackathonV2.html');
         } else {
             throw new Error("Unsupported application version: " + appVersion);
         }

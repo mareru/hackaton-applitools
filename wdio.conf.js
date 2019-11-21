@@ -17,7 +17,8 @@ exports.config = {
         // './src/features/loginPageUIElements.feature',
         // './src/features/loginPageDataDriven.feature',
         // './src/features/tableSort.feature',
-        './src/features/canvasChart.feature',
+        // './src/features/canvasChart.feature',
+        './src/features/dynamicContent.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -212,7 +213,7 @@ exports.config = {
          */
         const chai = require('chai');
 
-        global.expect = chai.expect();
+        global.expect = chai.expect;
         global.should = chai.should();
 
         //setup test data

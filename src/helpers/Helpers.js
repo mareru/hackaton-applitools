@@ -84,6 +84,7 @@ class Helpers {
         // number of rows that are equal must be the same as the number of items in starting array
         return result.length === array1.length;
     }
+
 }
 
 export default new Helpers();
