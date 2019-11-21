@@ -16,7 +16,8 @@ exports.config = {
         //'./src/features/**/*.feature',
         // './src/features/loginPageUIElements.feature',
         // './src/features/loginPageDataDriven.feature',
-        './src/features/tableSort.feature',
+        // './src/features/tableSort.feature',
+        './src/features/canvasChart.feature',
     ],
     // Patterns to exclude.
     exclude: [

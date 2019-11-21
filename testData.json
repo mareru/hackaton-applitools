@@ -6,5 +6,9 @@
   "dashboard": {
     "urlV1": "https://demo.applitools.com/hackathonApp.html",
     "urlV2": "https://demo.applitools.com/hackathonAppV2.html"
+  },
+  "chart": {
+    "urlV1": "https://demo.applitools.com/hackathonChart.html",
+    "urlV2": "https://demo.applitools.com/hackathonChartV2.html"
   }
 }

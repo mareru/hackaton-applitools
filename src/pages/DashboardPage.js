@@ -19,6 +19,10 @@ class DashboardPage {
         return $$('#transactionsTable > tbody > tr');
     }
 
+    get compareExpensesButton() {
+        return $('#showExpensesChart');
+    }
+
     clickAmountColumnHeader() {
         this.amountColumnHeader.click();
     }
@@ -30,6 +34,10 @@ class DashboardPage {
     checkTransactionTableRows() {
         let rowsAfterSorting = Helpers.recordTransactionTable(this.transactionTableRows);
         Helpers.isTransactionRowsIntact(rowsBeforeSortingClick, rowsAfterSorting).should.equal(true);
+    }
+
+    clickCompareExpensesButton() {
+        this.compareExpensesButton.click();
     }
 
     verify(appVersion) {
