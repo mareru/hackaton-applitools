@@ -1,5 +1,5 @@
 import {Then, When} from 'cucumber';
-import LoginPage from "../pages/LoginPage";
+import LoginPage from "../../pages/traditional/LoginPage";
 
 When(/^I land on the login page of "([^"]*)" app$/, function (appVersion) {
     LoginPage.openPage(appVersion);

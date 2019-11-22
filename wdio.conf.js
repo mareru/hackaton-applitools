@@ -1,5 +1,5 @@
 const path = require('path');
-const commands = require('./src/commands/commands');
+const commands = require('./src/commands/traditional/commands');
 
 exports.config = {
     //
@@ -13,12 +13,15 @@ exports.config = {
     // `wdio` will be called from there.
 
     specs: [
-        //'./src/features/**/*.feature',
-        // './src/features/loginPageUIElements.feature',
-        // './src/features/loginPageDataDriven.feature',
-        // './src/features/tableSort.feature',
-        // './src/features/canvasChart.feature',
-        './src/features/dynamicContent.feature',
+        // './src/features/**/*.feature',
+        // './src/features/traditional/*.feature',
+        // './src/features/traditional/loginPageUIElements.feature',
+        // './src/features/traditional/loginPageDataDriven.feature',
+        // './src/features/traditional/tableSort.feature',
+        // './src/features/traditional/canvasChart.feature',
+        // './src/features/traditional/dynamicContent.feature',
+        //'./src/features/applitools/*.feature',
+        './src/features/applitools/loginPageUIElements.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -168,7 +171,7 @@ exports.config = {
             // <string[]> (file/dir) require files before executing features
             require:
                 [
-                    './src/step_definitions/*.js'
+                    './src/step_definitions/**/*.js'
                     // Or search a (sub)folder for JS files with a wildcard
                     // works since version 1.1 of the wdio-cucumber-framework
                     //'./src/**/*.js',

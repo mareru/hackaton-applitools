@@ -1,6 +1,6 @@
 import {Then, Given} from 'cucumber';
-import LoginPage from "../pages/LoginPage";
-import DashboardPage from "../pages/DashboardPage";
+import LoginPage from "../../pages/traditional/LoginPage";
+import DashboardPage from "../../pages/traditional/DashboardPage";
 
 Given(/^I am logged in "([^"]*)" app with display ad images$/, function (appVersion) {
     LoginPage.openPage(appVersion, true);

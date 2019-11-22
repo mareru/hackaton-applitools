@@ -1,5 +1,5 @@
 'use strict';
-import {APP_VERSION_1, APP_VERSION_2, LOW_TIMEOUT} from "../helpers/constants";
+import {APP_VERSION_1, APP_VERSION_2, LOW_TIMEOUT} from "../../helpers/traditional/constants";
 
 class CanvasChartPage {
 

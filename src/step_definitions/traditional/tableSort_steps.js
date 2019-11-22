@@ -1,5 +1,5 @@
 import {When, Then} from 'cucumber';
-import DashboardPage from "../pages/DashboardPage";
+import DashboardPage from "../../pages/traditional/DashboardPage";
 
 When(/^I click on Amount column header$/, function () {
     DashboardPage.clickAmountColumnHeader();

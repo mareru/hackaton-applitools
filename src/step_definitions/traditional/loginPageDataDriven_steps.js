@@ -1,6 +1,6 @@
 import {Then, When, Given} from 'cucumber';
-import LoginPage from "../pages/LoginPage";
-import DashboardPage from "../pages/DashboardPage";
+import LoginPage from "../../pages/traditional/LoginPage";
+import DashboardPage from "../../pages/traditional/DashboardPage";
 
 When(/^I enter username$/, function () {
     LoginPage.inputUsername(testdata.login.username);

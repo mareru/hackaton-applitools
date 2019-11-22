@@ -1,6 +1,6 @@
 import {When, Then, Given} from 'cucumber';
-import DashboardPage from "../pages/DashboardPage";
-import CanvasChartPage from "../pages/CanvasChartPage";
+import DashboardPage from "../../pages/traditional/DashboardPage";
+import CanvasChartPage from "../../pages/traditional/CanvasChartPage";
 
 When(/^I click Compare Expenses button$/, function () {
     DashboardPage.clickCompareExpensesButton();
