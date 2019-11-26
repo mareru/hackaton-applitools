@@ -1,4 +1,4 @@
-@LoginUIElements
+@LoginUIElementsApplitools
 Feature: Login UI elements exist on login page
 
     @V1
