@@ -5,5 +5,5 @@ Then(/^After providing credentials, I should be successfully logged in$/, async 
     await LoginPage.canSuccessfullyLogIn();
 });
 Then(/^Providing just username will throw an error$/, async function () {
-    //await LoginPage.canSuccessfullyLogIn();
+    await LoginPage.verifyMissingPassword();
 });

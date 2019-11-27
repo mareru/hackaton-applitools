@@ -1,6 +1,6 @@
 'use strict';
 
-import {APP_VERSION_1, APP_VERSION_2} from "../../helpers/traditional/constants";
+import {APP_VERSION_1, APP_VERSION_2, LOW_TIMEOUT} from "../../helpers/traditional/constants";
 import Helpers from "../../helpers/traditional/Helpers";
 const {ConsoleLogHandler} = require('@applitools/eyes-sdk-core');
 
@@ -76,15 +76,13 @@ class LoginPage {
             await eyes.open(browser, 'Login Page Scenarios', 'Successful login'); // {width: 1536, height: 674}
 
             const usernameField = await this.usernameField;
-            usernameField.click();
-            Helpers.elemInputText(usernameField, testdata.login.username);
+            await Helpers.elemInputText(usernameField, testdata.login.username);
 
             const passwordField = await this.passwordField;
-            passwordField.click();
-            Helpers.elemInputText(passwordField, testdata.login.password);
+            await Helpers.elemInputText(passwordField, testdata.login.password);
 
             const loginButton = await this.loginButton;
-            loginButton.click();
+            await loginButton.click();
 
             // Visual checkpoint #1.
             await eyes.check('Check successful login ', Target.window());
@@ -130,7 +128,7 @@ class LoginPage {
 
             const usernameField = await this.usernameField;
             usernameField.click();
-            Helpers.elemInputText(usernameField, testdata.login.username);
+            await Helpers.elemInputText(usernameField, testdata.login.username);
 
             const loginButton = await this.loginButton;
             loginButton.click();

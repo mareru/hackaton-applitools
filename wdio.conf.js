@@ -21,7 +21,7 @@ exports.config = {
         // './src/features/traditional/canvasChart.feature',
         // './src/features/traditional/dynamicContent.feature',
         //'./src/features/applitools/*.feature',
-        // './src/features/applitools/loginPageUIElements.feature',
+        //'./src/features/applitools/loginPageUIElements.feature',
         './src/features/applitools/loginPageDataDriven.feature',
     ],
     // Patterns to exclude.

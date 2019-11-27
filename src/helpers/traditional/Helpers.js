@@ -18,10 +18,10 @@ class Helpers {
         element.getAttribute('placeholder').should.equal(text);
     }
 
-    elemInputText(element, text) {
-        element.waitForDisplayed(LOW_TIMEOUT);
+    async elemInputText(element, text) {
+        await element.waitForDisplayed(LOW_TIMEOUT);
         element.clearValue();
-        element.setValue(text);
+        await element.setValue(text);
     }
 
     alertMessageIsDisplayed(element, msg) {
