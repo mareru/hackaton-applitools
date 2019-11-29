@@ -186,13 +186,12 @@ exports.config = {
             // <string> (expression) only execute the features or scenarios with
             // tags matching the expression, see
             // https://docs.cucumber.io/tag-expressions/
-            tagExpression:
-                '@V1',
+            tagExpression: '',
             // <boolean> add cucumber tags to feature or scenario name
             tagsInTitle:
                 false,
             // <number> timeout for step definitions
-            timeout: 20000,
+            timeout: 20000000,
         },
     //
     // =====

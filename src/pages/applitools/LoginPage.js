@@ -1,8 +1,8 @@
 'use strict';
 
-import {APP_VERSION_1, APP_VERSION_2, LOW_TIMEOUT} from "../../helpers/traditional/constants";
+import {APP_VERSION_1, APP_VERSION_2, MEDIUM_TIMEOUT} from "../../helpers/traditional/constants";
 import Helpers from "../../helpers/traditional/Helpers";
-const {ConsoleLogHandler} = require('@applitools/eyes-sdk-core');
+// const {ConsoleLogHandler} = require('@applitools/eyes-sdk-core');
 
 // Initialize the eyes SDK
 const { Eyes, Target } = require('@applitools/eyes-webdriverio');
@@ -11,6 +11,7 @@ const eyes = new Eyes();
 
 // Set your private API key.
 eyes.setApiKey(process.env.APPLITOOLS_API_KEY_HACKATHON);
+
 
 class LoginPage {
 
@@ -54,7 +55,6 @@ class LoginPage {
             await eyes.close();
 
         } finally {
-            await browser.deleteSession();
             // If the test was aborted before eyes.close was called ends the test as aborted.
             await eyes.abortIfNotClosed();
 
@@ -62,6 +62,8 @@ class LoginPage {
     }
 
     async canSuccessfullyLogIn() {
+        let result = null;
+
         try {
             // eyes.setLogHandler(new ConsoleLogHandler(true));
             // Set browser to fullscreen
@@ -75,6 +77,8 @@ class LoginPage {
             // Start the test and set the browser's viewport size to
             await eyes.open(browser, 'Login Page Scenarios', 'Successful login'); // {width: 1536, height: 674}
 
+            await eyes.checkWindow('Empty login page', MEDIUM_TIMEOUT);
+
             const usernameField = await this.usernameField;
             await Helpers.elemInputText(usernameField, testdata.login.username);
 
@@ -85,34 +89,35 @@ class LoginPage {
             await loginButton.click();
 
             // Visual checkpoint #1.
-            await eyes.check('Check successful login ', Target.window());
+            // await eyes.check('Check successful login ', Target.window());
+            await eyes.checkWindow('Dashboard page', MEDIUM_TIMEOUT);
 
             // End the test.
-            await eyes.close();
+            //let status = await eyes.close();
 
-           /* // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Login Page Scenarios', 'Missing password error'); // {width: 1536, height: 674}
+           /* await console.log("###################################");
+            await console.log(status.getMatches());
+            await console.log(status.getMismatches());
+            await console.log(status.getMissing());
+            await console.log(status.getStatus());
+            await console.log(status.getIsDifferent());
+            await console.log("###################################");*/
 
-            usernameField.click();
-            Helpers.elemInputText(usernameField, testdata.login.username);
+            result = await eyes.close();
 
-            loginButton.click();
-
-            // Visual checkpoint #1.
-            await eyes.check('Check missing password error', Target.window());
-
-            // End the test.
-            await eyes.close();*/
-
+        } catch (e) {
+            console.log(e.getText);
         } finally {
-            await browser.deleteSession();
             // If the test was aborted before eyes.close was called ends the test as aborted.
-            await eyes.abortIfNotClosed();
+             await eyes.abortIfNotClosed();
 
         }
+        return result;
     }
 
+
     async verifyMissingPassword() {
+        let result = null;
         try {
             // eyes.setLogHandler(new ConsoleLogHandler(true));
             // Set browser to fullscreen
@@ -126,25 +131,97 @@ class LoginPage {
             // Start the test and set the browser's viewport size to
             await eyes.open(browser, 'Login Page Scenarios', 'Missing password error'); // {width: 1536, height: 674}
 
+            await eyes.check('Empty login page', Target.window());
+
             const usernameField = await this.usernameField;
-            usernameField.click();
             await Helpers.elemInputText(usernameField, testdata.login.username);
 
             const loginButton = await this.loginButton;
-            loginButton.click();
+            await loginButton.click();
+
 
             // Visual checkpoint #1.
             await eyes.check('Check missing password error', Target.window());
 
             // End the test.
-            await eyes.close();
+            result = await eyes.close();
 
         } finally {
-            await browser.deleteSession();
             // If the test was aborted before eyes.close was called ends the test as aborted.
             await eyes.abortIfNotClosed();
-
         }
+        return result;
+    }
+
+    async verifyMissingUsername() {
+        let result = null;
+        try {
+            // eyes.setLogHandler(new ConsoleLogHandler(true));
+            // Set browser to fullscreen
+            // browser.windowHandleFullscreen();
+
+            eyes.setForceFullPageScreenshot(true);
+
+            // Set Batch Name and ID
+            eyes.setBatch("Login scenarios", "First Batch");
+
+            // Start the test and set the browser's viewport size to
+            await eyes.open(browser, 'Login Page Scenarios', 'Missing username error');
+
+            await eyes.check('Empty login page', Target.window());
+
+            const passwordField = await this.passwordField;
+            await Helpers.elemInputText(passwordField, testdata.login.password);
+
+            const loginButton = await this.loginButton;
+            await loginButton.click();
+
+
+            // Visual checkpoint #1.
+            await eyes.check('Check missing username error', Target.window());
+
+            // End the test.
+            result = await eyes.close();
+
+        } finally {
+            // If the test was aborted before eyes.close was called ends the test as aborted.
+            await eyes.abortIfNotClosed();
+        }
+        return result;
+    }
+
+    async verifyMissingCredentials() {
+        let result = null;
+        try {
+            // eyes.setLogHandler(new ConsoleLogHandler(true));
+            // Set browser to fullscreen
+            // browser.windowHandleFullscreen();
+
+            eyes.setForceFullPageScreenshot(true);
+
+            // Set Batch Name and ID
+            eyes.setBatch("Login scenarios", "First Batch");
+
+            // Start the test and set the browser's viewport size to
+            await eyes.open(browser, 'Login Page Scenarios', 'Missing credentials error');
+
+            await eyes.check('Empty login page', Target.window());
+
+            const loginButton = await this.loginButton;
+            await loginButton.click();
+
+
+            // Visual checkpoint #1.
+            await eyes.check('Check missing credentials error', Target.window());
+
+            // End the test.
+            result = await eyes.close();
+
+        } finally {
+            // If the test was aborted before eyes.close was called ends the test as aborted.
+            await eyes.abortIfNotClosed();
+        }
+        return result;
     }
 }
 
