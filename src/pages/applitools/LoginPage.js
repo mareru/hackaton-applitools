@@ -5,7 +5,7 @@ import Helpers from "../../helpers/traditional/Helpers";
 // const {ConsoleLogHandler} = require('@applitools/eyes-sdk-core');
 
 // Initialize the eyes SDK
-const { Eyes, Target } = require('@applitools/eyes-webdriverio');
+const { Eyes, Target, MatchLevel } = require('@applitools/eyes-webdriverio');
 
 const eyes = new Eyes();
 
@@ -22,7 +22,6 @@ class LoginPage {
     get passwordField() {
         return $('#password');
     }
-
 
     get loginButton() {
         return $('#log-in');
@@ -217,6 +216,36 @@ class LoginPage {
 
             // Visual checkpoint #1.
             await eyes.check('Check missing credentials error', Target.window());
+
+            // End the test.
+            result = await eyes.close();
+
+        } finally {
+            // If the test was aborted before eyes.close was called ends the test as aborted.
+            await eyes.abortIfNotClosed();
+        }
+        return result;
+    }
+
+    async verifyDisplayOfAdImages() {
+        let result = null;
+        try {
+            // eyes.setLogHandler(new ConsoleLogHandler(true));
+            // Set browser to fullscreen
+            // browser.windowHandleFullscreen();
+
+            eyes.setForceFullPageScreenshot(true);
+            eyes.setMatchLevel(MatchLevel.Layout);
+
+            // Start the test and set the browser's viewport size to
+            await eyes.open(browser, 'Display ad images', 'Ad images displayed');
+
+            await eyes.check('Empty login page', Target.window());
+
+            this.login();
+
+            // Visual checkpoint #1.
+            await eyes.check('Check ad images are displayed', Target.window());
 
             // End the test.
             result = await eyes.close();

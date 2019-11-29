@@ -24,7 +24,8 @@ exports.config = {
         // './src/features/applitools/loginPageUIElements.feature',
         // './src/features/applitools/loginPageDataDriven.feature',
         // './src/features/applitools/tableSort.feature',
-        './src/features/applitools/canvasChart.feature'
+        // './src/features/applitools/canvasChart.feature',
+        './src/features/applitools/dynamicContent.feature'
     ],
     // Patterns to exclude.
     exclude: [
