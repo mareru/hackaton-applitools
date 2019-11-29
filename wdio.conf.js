@@ -20,9 +20,10 @@ exports.config = {
         // './src/features/traditional/tableSort.feature',
         // './src/features/traditional/canvasChart.feature',
         // './src/features/traditional/dynamicContent.feature',
-        //'./src/features/applitools/*.feature',
-        //'./src/features/applitools/loginPageUIElements.feature',
-        './src/features/applitools/loginPageDataDriven.feature',
+        // './src/features/applitools/*.feature',
+        // './src/features/applitools/loginPageUIElements.feature',
+        // './src/features/applitools/loginPageDataDriven.feature',
+        './src/features/applitools/tableSort.feature',
     ],
     // Patterns to exclude.
     exclude: [

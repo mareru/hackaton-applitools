@@ -49,7 +49,7 @@ class LoginPage {
             await eyes.open(browser, 'Login Page', 'UI elements exist on login page'); // {width: 1536, height: 674}
 
             // Visual checkpoint #1.
-            await eyes.check('Login Page', Target.window());
+            await eyes.checkWindow('Login Page', MEDIUM_TIMEOUT);
 
             // End the test.
             await eyes.close();
@@ -79,14 +79,7 @@ class LoginPage {
 
             await eyes.checkWindow('Empty login page', MEDIUM_TIMEOUT);
 
-            const usernameField = await this.usernameField;
-            await Helpers.elemInputText(usernameField, testdata.login.username);
-
-            const passwordField = await this.passwordField;
-            await Helpers.elemInputText(passwordField, testdata.login.password);
-
-            const loginButton = await this.loginButton;
-            await loginButton.click();
+            await this.login();
 
             // Visual checkpoint #1.
             // await eyes.check('Check successful login ', Target.window());
@@ -115,6 +108,17 @@ class LoginPage {
         return result;
     }
 
+
+    async login() {
+        const usernameField = await this.usernameField;
+        await Helpers.elemInputText(usernameField, testdata.login.username);
+
+        const passwordField = await this.passwordField;
+        await Helpers.elemInputText(passwordField, testdata.login.password);
+
+        const loginButton = await this.loginButton;
+        await loginButton.click();
+    }
 
     async verifyMissingPassword() {
         let result = null;
