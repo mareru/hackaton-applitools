@@ -1,6 +1,6 @@
 # hackaton-applitools
 
-The project uses WebdriverIO and Applitools eyes and Cucumber to provide UI automation tests for 
+The project uses WebdriverIO, Applitools eyes and Cucumber to provide UI automation tests for 
 5 tasks presented in the Applitools hackhaton (https://applitools.com/hackathon-instructions).  
 All tasks were automated in traditional manner using only WebdriverIO.  
 And then they were automated again using WebdriverIO and Applitools eyes.
@@ -22,7 +22,7 @@ To run the test do following:
 1. clone the repo with the command:  
 
        git clone https://github.com/mareru/hackaton-applitools.git
-2. install packages with the command:
+2. change the directory to position yourself in the root folder of the project (`hackaton-applitools`) and install dependencies with the command:
 
         npm install
 3. for the applitools test suite to run you need to set environment variable APPLITOOLS_API_KEY_HACKATHON:
