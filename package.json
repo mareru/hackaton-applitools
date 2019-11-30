@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test1": "mocha ./test/example-*.js -t 300000",
     "test": "./node_modules/.bin/wdio wdio.conf.js",
     "traditionalversion1": "./node_modules/.bin/wdio ./src/resources/config/wdio.tradv1.conf.js",
     "traditionalversion2": "./node_modules/.bin/wdio ./src/resources/config/wdio.tradv2.conf.js",
@@ -12,14 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/applitools/tutorial-webdriverio5-basic.git"
+    "url": "https://github.com/mareru/hackaton-applitools"
   },
-  "author": "Applitools Team <team@applitools.com> (http://www.applitools.com/)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/applitools/tutorial-webdriverio5-basic/issues"
-  },
-  "homepage": "https://github.com/applitools/tutorial-webdriverio5-basic#readme",
+  "author": "Marijana Rukavina",
   "keywords": [
     "webdriverio"
   ],
