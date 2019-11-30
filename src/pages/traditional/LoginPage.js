@@ -147,7 +147,7 @@ class LoginPage {
     }
 
     login() {
-        this.loginButton.click();
+        Helpers.elemClick(this.loginButton);
     }
 
     alertMessageForPassIsDisplayed() {

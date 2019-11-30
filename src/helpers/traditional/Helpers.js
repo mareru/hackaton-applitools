@@ -24,6 +24,11 @@ class Helpers {
         await element.setValue(text);
     }
 
+    elemClick(element) {
+        element.waitForEnabled(LOW_TIMEOUT);
+        element.click();
+    }
+
     alertMessageIsDisplayed(element, msg) {
         this.elemExistsAndIsDisplayed(element);
         this.elemHasText(element, msg);

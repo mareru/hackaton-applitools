@@ -1,6 +1,6 @@
 'use strict';
 
-import {APP_VERSION_1, APP_VERSION_2, LOW_TIMEOUT} from "../../helpers/traditional/constants";
+import {APP_VERSION_1, APP_VERSION_2, HIGH_TIMEOUT} from "../../helpers/traditional/constants";
 import Helpers from "../../helpers/traditional/Helpers";
 
 export var rowsBeforeSortingClick;
@@ -64,9 +64,9 @@ class DashboardPage {
 
     verify(appVersion, displayAd = false) {
         if (appVersion === APP_VERSION_1) {
-            displayAd? browser.waitForUrl(testdata.dashboard.urlV1WithShowAd, LOW_TIMEOUT, false) : browser.waitForUrl(testdata.dashboard.urlV1, LOW_TIMEOUT, false);
+            displayAd? browser.waitForUrl(testdata.dashboard.urlV1WithShowAd, HIGH_TIMEOUT, false) : browser.waitForUrl(testdata.dashboard.urlV1, HIGH_TIMEOUT, false);
         } else if (appVersion === APP_VERSION_2) {
-            displayAd ? browser.waitForUrl(testdata.dashboard.urlV2WithShowAd, LOW_TIMEOUT, false) : browser.waitForUrl(testdata.dashboard.urlV2, LOW_TIMEOUT, false);
+            displayAd ? browser.waitForUrl(testdata.dashboard.urlV2WithShowAd, HIGH_TIMEOUT, false) : browser.waitForUrl(testdata.dashboard.urlV2, HIGH_TIMEOUT, false);
         } else {
             throw new Error("Unsupported application version: " + appVersion);
         }
