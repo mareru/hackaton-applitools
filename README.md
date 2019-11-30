@@ -1,6 +1,9 @@
 # hackaton-applitools
 
-The project uses WebdriverIO and Applitools eyes.
+The project uses WebdriverIO and Applitools eyes and Cucumber to provide UI automation tests for 
+5 tasks presented in the Applitools hackhaton (https://applitools.com/hackathon-instructions).  
+All tasks were automated in traditional manner using only WebdriverIO.  
+And then they were automated again using WebdriverIO and Applitools eyes.
 
 ## Requirements
 Node.js version 10.16.3 or higher (https://nodejs.org/en/).  
