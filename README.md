@@ -9,10 +9,14 @@ To run the test do following:
 2. install packages with the command:
 
         npm install
-3. for the applitools test suite to run you need to set environment variable:
+3. for the applitools test suite to run you need to set environment variable APPLITOOLS_API_KEY_HACKATHON:
 
         Mac: export APPLITOOLS_API_KEY_HACKATHON='YOUR_API_KEY'
         Windows: set APPLITOOLS_API_KEY_HACKATHON='YOUR_API_KEY'
+   You can get the key by creating the account on the https://applitools.com/users/register .  
+   There you can find the key value.  
+   
+   ![API_KEY](src/resources/images/API_KEY_1.png)
 4. In order to run traditional test suite for version 1 of the app use command:
         
         npm run traditionalversion1
