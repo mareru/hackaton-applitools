@@ -16,7 +16,7 @@ To run the test do following:
    You can get the key by creating the account on the https://applitools.com/users/register .  
    There you can find the key value.  
    
-   ![API_KEY](src/resources/images/API_KEY_1.png)
+   ![API_KEY](src/resources/images/API_KEY.png)
 4. In order to run traditional test suite for version 1 of the app use command:
         
         npm run traditionalversion1
