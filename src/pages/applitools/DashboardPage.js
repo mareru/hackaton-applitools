@@ -19,18 +19,6 @@ class DashboardPage {
         return $('#amount');
     }
 
-    get compareExpensesButton() {
-        return $('#showExpensesChart');
-    }
-
-    get adImage1() {
-        return $('#flashSale > img');
-    }
-
-    get adImage2() {
-        return $('#flashSale2 > img');
-    }
-
     async verifySortOfTransactionTable() {
         let result = null;
 
@@ -40,8 +28,11 @@ class DashboardPage {
             // browser.windowHandleFullscreen();
 
             eyes.setForceFullPageScreenshot(true);
+
+            eyes.setBatch("Hackhaton Batch", "Batch 1");
+
             // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Transaction table sort', 'Transaction table sorted ascending by Amount');
+            await eyes.open(browser, 'Hackhaton batch scenarios', 'Transaction table sorted ascending by Amount');
 
             await eyes.checkWindow('Empty login page', MEDIUM_TIMEOUT);
 

@@ -32,8 +32,11 @@ class CanvasChartPage {
             // browser.windowHandleFullscreen();
 
             eyes.setForceFullPageScreenshot(true);
+
+            eyes.setBatch("Hackhaton Batch", "Batch 1");
+
             // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Canvas chart', 'Data on chart for 2017 - 2019');
+            await eyes.open(browser, 'Hackhaton batch scenarios', 'Data on chart for 2017 - 2019');
 
             await eyes.checkWindow('Empty login page', MEDIUM_TIMEOUT);
 

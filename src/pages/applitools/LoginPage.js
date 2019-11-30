@@ -44,8 +44,11 @@ class LoginPage {
             // browser.windowHandleFullscreen();
 
             eyes.setForceFullPageScreenshot(true);
+
+            eyes.setBatch("Hackhaton Batch", "Batch 1");
+
             // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Login Page', 'UI elements exist on login page'); // {width: 1536, height: 674}
+            await eyes.open(browser, 'Hackhaton batch scenarios', 'UI elements exist on login page'); // {width: 1536, height: 674}
 
             // Visual checkpoint #1.
             await eyes.checkWindow('Login Page', MEDIUM_TIMEOUT);
@@ -71,10 +74,10 @@ class LoginPage {
             eyes.setForceFullPageScreenshot(true);
 
             // Set Batch Name and ID
-            eyes.setBatch("Login scenarios", "First Batch");
+            eyes.setBatch("Hackhaton Batch", "Batch 1");
 
             // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Login Page Scenarios', 'Successful login'); // {width: 1536, height: 674}
+            await eyes.open(browser, 'Hackhaton batch scenarios', 'Successful login'); // {width: 1536, height: 674}
 
             await eyes.checkWindow('Empty login page', MEDIUM_TIMEOUT);
 
@@ -129,10 +132,10 @@ class LoginPage {
             eyes.setForceFullPageScreenshot(true);
 
             // Set Batch Name and ID
-            eyes.setBatch("Login scenarios", "First Batch");
+            eyes.setBatch("Hackhaton Batch", "Batch 1");
 
             // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Login Page Scenarios', 'Missing password error'); // {width: 1536, height: 674}
+            await eyes.open(browser, 'Hackhaton batch scenarios', 'Missing password error'); // {width: 1536, height: 674}
 
             await eyes.check('Empty login page', Target.window());
 
@@ -166,10 +169,10 @@ class LoginPage {
             eyes.setForceFullPageScreenshot(true);
 
             // Set Batch Name and ID
-            eyes.setBatch("Login scenarios", "First Batch");
+            eyes.setBatch("Hackhaton Batch", "Batch 1");
 
             // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Login Page Scenarios', 'Missing username error');
+            await eyes.open(browser, 'Hackhaton batch scenarios', 'Missing username error');
 
             await eyes.check('Empty login page', Target.window());
 
@@ -203,10 +206,10 @@ class LoginPage {
             eyes.setForceFullPageScreenshot(true);
 
             // Set Batch Name and ID
-            eyes.setBatch("Login scenarios", "First Batch");
+            eyes.setBatch("Hackhaton Batch", "Batch 1");
 
             // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Login Page Scenarios', 'Missing credentials error');
+            await eyes.open(browser, 'Hackhaton batch scenarios', 'Missing credentials error');
 
             await eyes.check('Empty login page', Target.window());
 
@@ -237,8 +240,10 @@ class LoginPage {
             eyes.setForceFullPageScreenshot(true);
             eyes.setMatchLevel(MatchLevel.Layout);
 
+            eyes.setBatch("Hackhaton Batch", "Batch 1");
+
             // Start the test and set the browser's viewport size to
-            await eyes.open(browser, 'Display ad images', 'Ad images displayed');
+            await eyes.open(browser, 'Hackhaton batch scenarios', 'Ad images displayed');
 
             await eyes.check('Empty login page', Target.window());
 
