@@ -6,9 +6,9 @@ All tasks were automated in traditional manner using only WebdriverIO.
 And then they were automated again using WebdriverIO and Applitools eyes.
 
 ## Requirements
-Node.js version 10.16.3 or higher (https://nodejs.org/en/).  
+Node.js version `10.16.3` or higher (https://nodejs.org/en/).  
 Once downloaded it will also download npm (node package manager) for you.  
-npm version 6.12.0 or higher.
+npm version `6.12.0` or higher.
 
 In order to check node version, type into command prompt or terminal:
 
