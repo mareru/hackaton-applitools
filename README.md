@@ -1,7 +1,20 @@
 # hackaton-applitools
 
 The project uses WebdriverIO and Applitools eyes.
-  
+
+## Requirements
+Node.js version 10.16.3 or higher (https://nodejs.org/en/).  
+Once downloaded it will also download npm (node package manager) for you.  
+npm version 6.12.0 or higher.
+
+In order to check node version, type into command prompt or terminal:
+
+        node --version
+In order to check npm version, type into command prompt or terminal:
+
+        npm --version
+
+## Quick start
 To run the test do following:
 1. clone the repo with the command:  
 
