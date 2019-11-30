@@ -29,9 +29,9 @@ class LoginPage {
 
     async openPage(appVersion, displayAd = false) {
         if (appVersion === APP_VERSION_1) {
-            displayAd? browser.url('/hackathon.html?showAd=true') : browser.url('/hackathon.html');
+            displayAd? await browser.url('/hackathon.html?showAd=true') : await browser.url('/hackathon.html');
         } else if (appVersion === APP_VERSION_2) {
-            displayAd? browser.url('/hackathonV2.html?showAd=true') : browser.url('/hackathonV2.html');
+            displayAd? await browser.url('/hackathonV2.html?showAd=true') : await browser.url('/hackathonV2.html');
         } else {
             throw new Error("Unsupported application version: " + appVersion);
         }
@@ -119,7 +119,7 @@ class LoginPage {
         await Helpers.elemInputText(passwordField, testdata.login.password);
 
         const loginButton = await this.loginButton;
-        await loginButton.click();
+        await Helpers.elemClick(loginButton);
     }
 
     async verifyMissingPassword() {
@@ -143,7 +143,7 @@ class LoginPage {
             await Helpers.elemInputText(usernameField, testdata.login.username);
 
             const loginButton = await this.loginButton;
-            await loginButton.click();
+            await Helpers.elemClick(loginButton);
 
 
             // Visual checkpoint #1.
@@ -180,8 +180,7 @@ class LoginPage {
             await Helpers.elemInputText(passwordField, testdata.login.password);
 
             const loginButton = await this.loginButton;
-            await loginButton.click();
-
+            await Helpers.elemClick(loginButton);
 
             // Visual checkpoint #1.
             await eyes.check('Check missing username error', Target.window());
@@ -214,7 +213,7 @@ class LoginPage {
             await eyes.check('Empty login page', Target.window());
 
             const loginButton = await this.loginButton;
-            await loginButton.click();
+            await Helpers.elemClick(loginButton);
 
 
             // Visual checkpoint #1.

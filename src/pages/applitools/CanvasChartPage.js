@@ -2,6 +2,7 @@
 
 import {MEDIUM_TIMEOUT} from "../../helpers/traditional/constants";
 import LoginPage from "./LoginPage";
+import Helpers from "../../helpers/traditional/Helpers";
 
 // const {ConsoleLogHandler} = require('@applitools/eyes-sdk-core');
 
@@ -45,12 +46,12 @@ class CanvasChartPage {
             await eyes.checkWindow('Dashboard page', MEDIUM_TIMEOUT);
 
             const showExpensesChartButton = await this.showExpensesChartButton;
-            await showExpensesChartButton.click();
+            await Helpers.elemClick(showExpensesChartButton);
 
             await eyes.checkWindow('Chart for 2017 and 2018', MEDIUM_TIMEOUT);
 
             const showDataForNextYearButton = await this.showDataForNextYearButton;
-            await showDataForNextYearButton.click();
+            await Helpers.elemClick(showDataForNextYearButton);
 
             await eyes.checkWindow('Chart for 2019', MEDIUM_TIMEOUT);
 

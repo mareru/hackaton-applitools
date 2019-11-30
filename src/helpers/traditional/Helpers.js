@@ -24,9 +24,9 @@ class Helpers {
         await element.setValue(text);
     }
 
-    elemClick(element) {
-        element.waitForEnabled(LOW_TIMEOUT);
-        element.click();
+    async elemClick(element) {
+        await element.waitForEnabled(LOW_TIMEOUT);
+        await element.click();
     }
 
     alertMessageIsDisplayed(element, msg) {

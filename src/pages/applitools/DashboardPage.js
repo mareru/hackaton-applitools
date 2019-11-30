@@ -2,6 +2,7 @@
 
 import {MEDIUM_TIMEOUT} from "../../helpers/traditional/constants";
 import LoginPage from "./LoginPage";
+import Helpers from "../../helpers/traditional/Helpers";
 // const {ConsoleLogHandler} = require('@applitools/eyes-sdk-core');
 
 // Initialize the eyes SDK
@@ -41,7 +42,7 @@ class DashboardPage {
             await eyes.checkWindow('Dashboard page', MEDIUM_TIMEOUT);
 
             const amountColumnHeader = await this.amountColumnHeader;
-            await amountColumnHeader.click();
+            await Helpers.elemClick(amountColumnHeader);
 
             await eyes.checkWindow('Sorted transaction page by amount asc', MEDIUM_TIMEOUT);
 
