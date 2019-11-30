@@ -1,6 +1,6 @@
 # hackaton-applitools
 
-The project uses WebdriverIO, Applitools eyes and Cucumber to provide UI automation tests for 
+The project uses WebdriverIO v5, Applitools eyes and Cucumber to provide UI automation tests for 
 5 tasks presented in the Applitools hackhaton (https://applitools.com/hackathon-instructions).  
 All tasks were automated in traditional manner using only WebdriverIO.  
 And then they were automated again using WebdriverIO and Applitools eyes.
