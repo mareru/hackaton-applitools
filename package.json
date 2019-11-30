@@ -42,9 +42,11 @@
     "@applitools/eyes-sdk-core": "latest"
   },
   "devDependencies": {
+    "@applitools/eyes-webdriverio": "^5.8.1",
     "@babel/core": "^7.4.0",
     "@wdio/allure-reporter": "^5.13.2",
     "@wdio/browserstack-service": "^5.0.0",
+    "allure-commandline": "^2.13.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.8.0",
     "chromedriver": "^75.0.0",
@@ -53,7 +55,6 @@
     "forever": "^0.15.3",
     "jest": "^24.8.0",
     "npm-run-all": "^4.1.5",
-    "wdio-chromedriver-service": "^5.0.2",
-    "@applitools/eyes-webdriverio": "^5.8.1"
+    "wdio-chromedriver-service": "^5.0.2"
   }
 }

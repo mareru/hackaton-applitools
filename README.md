@@ -89,3 +89,13 @@ For example, to run tests for the second task (Data-Driven Test):
                 
                 ./src/features/traditional/dynamicContent.feature
                 ./src/features/applitools/dynamicContent.feature
+6. To view nice results report after running traditional test suite or specific feature file:  
+      1. run the test suite for example:  
+               
+               npm run traditionalversion1
+      2. `allure-results` folder will be generated in the root directory of the project  
+      3. in the root directory of the project run the command:
+      
+                allure generate allure-results --clean -o allure-report
+      4. On successful execution it will generate one more folder `allure-report` in the root directory of the project
+      5. Open `index.html` file in the browser (i.e. FireFox or Chrome) to show the report. 
