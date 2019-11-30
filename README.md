@@ -14,7 +14,7 @@ To run the test do following:
         Mac: export APPLITOOLS_API_KEY_HACKATHON='YOUR_API_KEY'
         Windows: set APPLITOOLS_API_KEY_HACKATHON='YOUR_API_KEY'
    You can get the key by creating the account on the https://applitools.com/users/register .  
-   There you can find the key value.  
+   Once you create the account and log in to the Applitools Eyes Test Manager application, there you can find the key value.  
    
    ![API_KEY](src/resources/images/API_KEY.png)
 4. In order to run traditional test suite for version 1 of the app use command:
