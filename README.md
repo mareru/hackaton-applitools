@@ -98,4 +98,4 @@ For example, to run tests for the second task (Data-Driven Test):
       
                 allure generate allure-results --clean -o allure-report
       4. On successful execution it will generate one more folder `allure-report` in the root directory of the project
-      5. Open `index.html` file in the browser (i.e. FireFox or Chrome) to show the report. 
+      5. Open `index.html` file from `allure-report` folder in the browser (i.e. FireFox or Chrome) to show the report
