@@ -45,9 +45,9 @@ To run the test do following:
    In order to run applitools test suite for version 2 of the app use the command:
    
         npm run applitoolsversion2
-5. if you want to run only the specific feature file, then open wdio.conf.js file and comment everything in the specs section except that feature file. 
+5. if you want to run only the specific feature file, then open `wdio.conf.js` file and comment everything in the specs section except that feature file. 
 For example, to run tests for the second task (Data-Driven Test):  
-    1. open wdio.conf.js
+    1. open `wdio.conf.js` located in the root folder of the project
     2. uncomment feature file for that task (for traditional and applitools version) and comment everything else in specs section:
      
             specs: [
